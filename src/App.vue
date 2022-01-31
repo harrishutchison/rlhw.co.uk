@@ -1,6 +1,12 @@
 <style>
 .font {
-  font-family: "Garamond", cursive !important;
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+@media screen and (min-width: 961px) {
+  p {
+    font-size: 18px !important;
+  }
 }
 </style>
 
@@ -10,37 +16,33 @@
       <v-layout justify-center>
         <v-container>
           <v-layout>
-            <div>
+            <div align="center">
               <h1>R. L. H. Watson</h1>
             </div>
             <v-spacer></v-spacer>
-            <!-- <v-toolbar-items class="text-right">
-              <v-btn class="font-weight-bold" text>Writings</v-btn>
-              <v-btn class="font-weight-bold" text>Blog</v-btn>
-              <v-btn class="font-weight-bold" text>About</v-btn>
-              <v-btn class="font-weight-bold" text>Contact</v-btn>
-            </v-toolbar-items> -->
-            <v-btn
-            fab
-            dark
-            elevation="0"
-            large
-            color="primary"
-            href="mailto:hello@rlhw.co.uk"
-          >
-            <v-icon dark> mdi-email </v-icon>
-          </v-btn>
-          <v-btn
-            fab
-            dark
-            elevation="0"
-            large
-            color="primary"
-            href="https://www.facebook.com/RLHWATTO"
-            target="_blank"
-          >
-            <v-icon dark> mdi-facebook </v-icon>
-          </v-btn>
+            <div v-if="!this.$vuetify.breakpoint.smAndDown">
+              <v-btn
+                fab
+                dark
+                elevation="0"
+                large
+                color="primary"
+                href="mailto:hello@rlhw.co.uk"
+              >
+                <v-icon dark> mdi-email </v-icon>
+              </v-btn>
+              <v-btn
+                fab
+                dark
+                elevation="0"
+                large
+                color="primary"
+                href="https://www.facebook.com/RLHWATTO"
+                target="_blank"
+              >
+                <v-icon dark> mdi-facebook </v-icon>
+              </v-btn>
+            </div>
           </v-layout>
         </v-container>
       </v-layout>

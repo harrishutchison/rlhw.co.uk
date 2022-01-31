@@ -8,10 +8,11 @@ p {
   <v-container>
     <br />
     <v-row justify="center">
-      <v-col cols="9">
-        <h1>About R. L. H. Watson</h1>
+      <v-col :cols='[this.$vuetify.breakpoint.mdAndDown ? 12 : 9]'>
+        <h1 align="center" v-if='this.$vuetify.breakpoint.mdAndDown'>About R. L. H. Watson</h1>
+        <h1 v-else>About R. L. H. Watson</h1>
         <v-row align="center" justify="center">
-          <v-col cols="7">
+          <v-col :cols='[this.$vuetify.breakpoint.mdAndDown ? 12 : 7]'>
             <v-card flat color="transparent">
               <div align="justify">
                 <p>
@@ -44,15 +45,16 @@ p {
               </div>
             </v-card>
           </v-col>
-          <v-col cols="5">
+          <v-col :cols='[this.$vuetify.breakpoint.mdAndDown ? 12 : 5]'>
             <v-card flat color="transparent" align="center">
               <v-img max-width="100%" src="..\..\img\author.png"></v-img>
             </v-card>
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols="3">
-        <h1>Contact</h1>
+      <v-col :cols='[this.$vuetify.breakpoint.mdAndDown ? 12 : 3]'>
+        <h1 align="center" v-if='this.$vuetify.breakpoint.mdAndDown'>Contact</h1>
+        <h1 v-else>Contact</h1>
         <p align="justify">
           As a writer trying to get published, please do contact me if you wish
           to discuss my works. However, I am unable to read any manuscripts or

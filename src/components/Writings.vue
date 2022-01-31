@@ -1,13 +1,7 @@
-<style>
-p {
-  font-size: 18px;
-}
-</style>
-
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="4">
+      <v-col :cols='size()'>
         <v-card flat color="transparent">
           <div align="center">
             <h1>Wailing in the Wetlands</h1>
@@ -31,7 +25,7 @@ p {
           </div>
         </v-card>
       </v-col>
-      <v-col cols="4">
+      <v-col :cols='size()'>
         <v-card flat color="transparent">
           <div align="center">
             <h1>The Tales of Alex de Vale</h1>
@@ -51,7 +45,7 @@ p {
           </div>
         </v-card>
       </v-col>
-      <v-col cols="4">
+      <v-col :cols='size()'>
         <v-card flat color="transparent">
           <div align="center">
             <h1 align="center">The Rogue Ambition</h1>
@@ -84,5 +78,13 @@ export default {
   data: () => ({
     //
   }),
+  methods: {
+    size:function() {
+      if (this.$vuetify.breakpoint.mdAndDown)
+        return 12;
+      else
+        return 4;
+    }
+  }
 };
 </script>

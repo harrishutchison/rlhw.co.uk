@@ -2,18 +2,18 @@
   <div>
   <welcome />
   <writings />
-  <blog />
+  <!-- <blog /> -->
   <about />
-  <contact />
+  <!-- <contact /> -->
   </div>
 </template>
 
 <script>
   import Welcome from '../components/Welcome'
   import Writings from '../components/Writings'
-  import Blog from '../components/Blog'
+  // import Blog from '../components/Blog'
   import About from '../components/About'
-  import Contact from '../components/Contact'
+  // import Contact from '../components/Contact'
 
   export default {
     name: 'Home',
@@ -21,9 +21,9 @@
     components: {
       Welcome,
       Writings,
-      Blog,
+      // Blog,
       About,
-      Contact,
+      // Contact,
     },
   }
 </script>
